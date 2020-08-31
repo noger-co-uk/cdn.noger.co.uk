@@ -1,18 +1,12 @@
 <html>
   <head>
     <style>
-    // Options
-$black: #1b1e23;
-$size: 200px;
-$white: #f4eed7;
-$feature : #4b9aaa;
-
 html,
 body {
   height: 100%;
 }
 body {
-  background: $black;
+  background: transparent;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -22,15 +16,15 @@ body {
 }
 
 p {
-  color: $white;
+  color: #f4eed7;
   font-size: 0.8em;
   opacity: 0.75;
 }
 
 .clock {
-  height: $size;
-  width: $size;
-  border-radius: #{$size / 2};
+  height: 200px;
+  width: 200px;
+  border-radius: #{200px / 2};
   display: flex;
   justify-content: center;
   position: relative;
@@ -40,47 +34,47 @@ p {
     position: absolute;
     left: calc(50% - 1px);
     width: 2px;
-    background: $white;
+    background: #f4eed7;
     transform-origin: bottom center;
     z-index: 2;
     border-radius: 1px;
   }
   &__second {
-    height: #{($size / 2) - 10};
+    height: #{(200px / 2) - 10};
     margin-top: 10px;
-    background: $feature;
+    background: #4b9aaa;
     animation: time 60s infinite steps(60);
     z-index: 3;
   }
   &__minute {
-    height: #{($size / 2) - 20};
+    height: #{(200px / 2) - 20};
     margin-top: 20px;
     opacity: 0.75;
     animation: time 3600s linear infinite;
   }
   &__hour {
-    height: #{($size / 2) - 40};
+    height: #{(200px / 2) - 40};
     margin-top: 40px;
     animation: time 43200s linear infinite;
   }
   &__indicator {
-    height: #{($size / 2) - 2};
-    border-top: 2px solid $feature;
+    height: #{(200px / 2) - 2};
+    border-top: 2px solid #4b9aaa;
     background: none;
   }
   &__indicator:nth-of-type(5n) {
     opacity: 1;
-    height: #{($size / 2) - 7};
-    border-top: 7px solid $white;
+    height: #{(200px / 2) - 7};
+    border-top: 7px solid #f4eed7;
   }
   &__axis {
-    background: $feature;
+    background: #4b9aaa;
     width: 5px;
     height: 5px;
     border-radius: 3px;
     position: absolute;
     z-index: 4;
-    top: #{$size / 2 - 3};
+    top: #{200px / 2 - 3};
     
   }
 }
